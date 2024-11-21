@@ -1,4 +1,4 @@
-// CypherDriver.cpp -- Encrypte and decrypt text for use in communication
+// CypherDriver.cpp -- Encrypt and decrypt text using the Vigenere cypher
 //CSIS 212-<D02_202440>
 
 //Sources
