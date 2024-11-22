@@ -25,6 +25,10 @@ public:
 	void numberWordsInMessage();
 	//Returns the number of words stored in data member processedWordsList
 
+	ProcessedMessage(std::string k);
+	//Single argument constructor
+	//	takes a string (key) and uses it to initialize member variable v
+
 private:
 	std::vector<std::string> processedWordsList;
 	//Private vector of strings to store list of encrypted OR decrypted words
