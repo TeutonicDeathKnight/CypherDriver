@@ -23,7 +23,7 @@ string Vigenere::toUpperCase(string k)
 		if (c >= 'a' && c <= 'z')
 			output += c - 32;
 		//for generalized toUpperCase() use, remove next else if block
-		else if ((c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+		else if (c >= 'A' && c <= 'Z')
 			output += c;
 		//for generalized toUpperCase() use, uncomment following else block
 		/*else

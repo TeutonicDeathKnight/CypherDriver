@@ -31,7 +31,4 @@ void ProcessedMessage::numberWordsInMessage()
 
 }
 
-ProcessedMessage::ProcessedMessage(string k)
-{
-
-}
+ProcessedMessage::ProcessedMessage(string k) { v.setKey(k); }
