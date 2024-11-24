@@ -36,9 +36,23 @@ int main()
 		cout << endl << endl;
 
 		if (selection != 3)
+		{
 			encryptionKey = getEncryptionKeyFromUser();
+			cout << endl << endl;
 
+			ProcessedMessage message(encryptionKey);
 
+			if (selection == 1)
+			{
+
+			}
+			else if (selection == 2)
+			{
+
+			}
+
+			
+		}
 
 	} while (selection != 3);
 

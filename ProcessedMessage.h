@@ -21,7 +21,7 @@ public:
 	void outputText();
 	//Prints the data member processedWordsList to screen
 
-	void numberWordsInMessage();
+	int numberWordsInMessage();
 	//Returns the number of words stored in data member processedWordsList
 
 	ProcessedMessage(std::string k);
