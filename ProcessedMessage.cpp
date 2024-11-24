@@ -1,7 +1,8 @@
-#include "ProcessedMessage.h"
-#include "Vigenere.h"
+
 #include <string>
 #include <vector>
+#include "Vigenere.h"
+#include "ProcessedMessage.h"
 
 using namespace std;
 

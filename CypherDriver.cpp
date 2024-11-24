@@ -1,7 +1,8 @@
-// CypherDriver.cpp -- Encrypt and decrypt text using the Vigenere cypher
+//CypherDriver.cpp -- Encrypt and decrypt text using the Vigenere cypher
 //CSIS 212-<D02_202440>
 
 //Sources
+//Encrypt and decrypt logic in Vignere.cpp taken from lab instructions
 
 //include and using statements
 #include <iostream>
@@ -19,12 +20,13 @@ int main()
 {
 	cout << "Zachary Seeley -- Lab 5 - Pointers" << endl << endl;
 
-	int selection = false;
+	int selection;
 
 	do
 	{
 		selection = displayMenu();
 
+		
 
 	} while (selection != 3);
 

@@ -1,5 +1,4 @@
 #pragma once
-#include "Vigenere.h"
 
 
 //Purpose of class:
