@@ -8,6 +8,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+//#include "Vigenere.h"
+//#include "ProcessedMessage.h"
 
 using namespace std;
 
