@@ -17,7 +17,7 @@ using namespace std;
 
 //function prototypes
 int displayMenu();
-string getEncryptionKeyFromUser();
+string getInputFromUser(string prompt, string eMessage);
 
 bool validateNotEmptyString(string strToTest);
 void clearInputStream();
@@ -37,13 +37,25 @@ int main()
 
 		if (selection != 3)
 		{
-			encryptionKey = getEncryptionKeyFromUser();
+			string prompt = "Enter an encryption/decryption key: ";
+			string eMessage = "Enter an encryption/decryption key as"
+				"a string of letters.\n"
+				"Any numbers or special characters"
+				"will be removed from input.\n\n";
+
+			encryptionKey = getInputFromUser(prompt, eMessage);
 			cout << endl << endl;
 
 			ProcessedMessage message(encryptionKey);
 
 			if (selection == 1)
 			{
+				string prompt = "Enter the name of the file to encrypt: ";
+				string eMessage = "Enter the correct and valid file name with"
+					"full path and file extension.\n\n";
+				string fileName = getInputFromUser(prompt, eMessage);
+
+				
 
 			}
 			else if (selection == 2)
@@ -107,30 +119,27 @@ int displayMenu()
 	return inputSelection;
 }
 
-//getEncryptionKeyFromUser()
-string getEncryptionKeyFromUser()
+
+string getInputFromUser(string prompt, string eMessage)
 {
 	bool validInput = false;
-	string output;
+	string fileName;
 
 	do
 	{
-		cout << "Enter an encryption/decryption key:" << endl;
+		cout << prompt;
 
-		getline(cin, output);
+		getline(cin, fileName);
 
-		if (cin.fail() || validateNotEmptyString(output) == false)
+		if (validateNotEmptyString(fileName) == false)
 			cout << endl << endl
-			<< "Input was invalid or blank." << endl
-			<< "Enter an encryption/decryption key as a string of letters.\n"
-			<< "Any numbers or special characters will be removed from input."
-			<< endl << endl;
+			<< "Input is blank and cannot be blank." << endl << eMessage;
 		else
 			validInput = true;
 
 	} while (validInput == false);
 
-	return output;
+	return fileName;
 }
 
 //validateNotEmptyString()

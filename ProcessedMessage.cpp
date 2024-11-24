@@ -23,15 +23,18 @@ void ProcessedMessage::createFile(string fileName)
 {
 	ofstream file(fileName);
 
-	for (int i = 0; i < processedWordsList.size(); i++)
+	if (file.is_open())
 	{
-		file << processedWordsList[i];
+		for (int i = 0; i < processedWordsList.size(); i++)
+		{
+			file << processedWordsList[i];
 
-		if (processedWordsList[i] != "\n" && processedWordsList[i + 1] != "\n")
-			file << ' ';
+			if (processedWordsList[i] != "\n" && processedWordsList[i + 1] != "\n")
+				file << ' ';
+		}
+
+		file.close();
 	}
-
-	file.close();
 }
 
 void ProcessedMessage::outputText()
