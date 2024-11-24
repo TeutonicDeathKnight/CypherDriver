@@ -9,12 +9,14 @@ using namespace std;
 
 void ProcessedMessage::encryptToken(char* token)
 {
-
+	string w(token);
+	processedWordsList.push_back(v.encryptWord(w));
 }
 
 void ProcessedMessage::decryptToken(char* token)
 {
-
+	string w(token);
+	processedWordsList.push_back(v.decryptWord(w));
 }
 
 void ProcessedMessage::createFile(string fileName)
