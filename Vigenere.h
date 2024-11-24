@@ -8,7 +8,8 @@ class Vigenere
 public:
 	void setKey(std::string k);
 	//Set private string data member key
-	//	ensure string is all uppercase using toUpperCase() before storing string
+	//	uses toUpperCase() to convert string to all uppercase letters
+	//  Verify string is not blank before passing to function
 
 	std::string getKey() const;
 	//Return value of private data member key

@@ -3,10 +3,7 @@
 
 using namespace std;
 
-void Vigenere::setKey(string k)
-{
-
-}
+void Vigenere::setKey(string k) { key = toUpperCase(k); }
 
 string Vigenere::getKey() const { return key; }
 
